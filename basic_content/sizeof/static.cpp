@@ -10,7 +10,8 @@
 
 #include <iostream>
 using namespace std;
-class A {
+class A
+{
 public:
   char b;
   virtual void fun(){};
@@ -19,7 +20,8 @@ public:
   static int f;
 };
 
-int main() {
+int main()
+{
 
   /**
    * @brief 16  字节对齐、静态变量不影响类的大小、vptr指针=8
