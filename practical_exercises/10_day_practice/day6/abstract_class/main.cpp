@@ -29,6 +29,7 @@ int main(int argc, char const *argv[]) {
   Rectangle r;
   Trianle t;
   t.set(10, 20);
+  t.area();
   pF = &t;
   pF->area();
   r.set(10, 20);

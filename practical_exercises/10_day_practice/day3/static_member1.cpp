@@ -21,7 +21,7 @@ void Application::g() { cout << global << endl; }
 
 int main() {
   Application::f();
-  Application::g();
+  Application::g(); // 5
   
   return 0;
 }

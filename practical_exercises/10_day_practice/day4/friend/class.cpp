@@ -10,6 +10,7 @@ using namespace std;
 但A类的成员函数却不能访问B类的私有、保护数据。
 */
 class A {
+public:
   friend class B;
 
 public:

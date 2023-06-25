@@ -43,6 +43,7 @@ int main() {
   cout << b1.getA() << endl;
   b1.setA(7);
   cout << b1.getA() << endl;
+  // 参数b1会进行拷贝构造，仅在函数体内有效，不影响b1本身
   f1(b1, 100);
   cout << "1111111111" << endl;
   cout << b1.getA() << endl; // 7

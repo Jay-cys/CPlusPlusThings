@@ -15,7 +15,7 @@ public:
     cout << "X::operator[" << i << "]" << endl;
     return i;
   };
-  int operator[](char *cp) {
+  int operator[](string cp) {
     cout << "X::operator[" << cp << "]" << endl;
     return 0;
   };

@@ -11,8 +11,8 @@ public:
     minute = m;
     second = s;
   }
-  Time operator++();
-  Time operator++(int);
+  Time operator++();    // 前置++
+  Time operator++(int); // 后置++
   void showTime() {
     cout << "当前时间为：" << hour << ":" << minute << ":" << second << endl;
   }
@@ -20,9 +20,11 @@ public:
 private:
   int hour, minute, second;
 };
+// 第一个Time指返回类型，第二个Time指作用域
 Time Time::operator++(int n) {
   Time tmp = *this;
   ++(*this);
+  cout << "(n)" << endl;
   return tmp;
 }
 Time Time::operator++() {
@@ -38,6 +40,7 @@ Time Time::operator++() {
       }
     }
   }
+  cout << "()" << endl;
   return *this;
 }
 
@@ -47,6 +50,6 @@ int main(int argc, char const *argv[]) {
   t.showTime();
   (t++).showTime();
   t.showTime();
-  
+
   return 0;
 }

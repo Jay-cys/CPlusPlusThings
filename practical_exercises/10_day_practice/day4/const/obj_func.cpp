@@ -9,6 +9,8 @@ public:
   // const区分成员重载函数
   void print();
   void print() const;
+  void print1() const;
+  void print2();
 
 private:
   int R1, R2;
@@ -29,12 +31,22 @@ void R::print() const {
   cout << "常对象调用" << endl;
   cout << R1 << ";" << R2 << endl;
 }
+void R::print1() const{
+  cout << "常对象调用" << endl;
+}
+void R::print2()
+{
+  cout << "普通调用" << endl;
+}
+
 int main() {
   R a(5, 4);
-  a.print(); //调用void print()
+  a.print();  // 调用void print()
+  a.print1(); // 普通对象调用常函数
   //通过常对象只能调用它的常成员函数
   const R b(20, 52);
   b.print(); //调用void print() const
+  // b.print2(); // 常对象不能调用普通函数
   
   return 0;
 }
